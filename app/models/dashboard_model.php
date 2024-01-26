@@ -10,7 +10,7 @@ class dashboard_model
     }
 
     public function sumUsers(){
-        $query = "SELECT COUNT(*) AS '0' FROM users";
+        $query = "SELECT COUNT(*) AS '0' FROM users WHERE id_role = 2";
         $this->db->query($query);
         return $this->db->single();
     }
